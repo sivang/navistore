@@ -1,0 +1,225 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>navistore.backend.iface.StorageBackend : API documentation</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <link href="apidocs.css" type="text/css" rel="stylesheet" />
+    
+    
+  </head>
+  <body>
+    <h1 class="class">n.b.i.StorageBackend(<span title="object">object</span>) : class documentation</h1>
+    <p>
+      <span id="part">Part of <a href="navistore.html">navistore</a>.<a href="navistore.backend.html">backend</a>.<a href="navistore.backend.iface.html">iface</a></span>
+      
+      <a href="classIndex.html#navistore.backend.iface.StorageBackend">View In Hierarchy</a>
+    </p>
+    <div>
+      <p>Known subclasses: <a href="navistore.backend.nhttp.HttpStorageBackend.html">navistore.backend.nhttp.HttpStorageBackend</a>, <a href="navistore.backend.nsqlite.SqliteStorageBackend.html">navistore.backend.nsqlite.SqliteStorageBackend</a></p>
+    </div>
+    <div>This an abstract class that defines the the interface that different 
+storage backends need to implement to be used in Navistore.</p>
+<p>Navistore HTTP layer uses the methods defined here to cater for the 
+actual saving of values by keys. E.g. Navistore does not know and should 
+know nothing about either disk, database backends or anything of the sort. 
+It delegates the task of the actual physical saving of data to the 
+underlying backend.<table class="fieldTable"></table></div>
+
+    
+    
+    <div id="splitTables">
+      <table class="children sortable" id="id148">
+  
+  
+<tr class="method">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.iface.StorageBackend.html#__init__">__init__</a></td>
+    <td><span>Any required initialization shold go</span></td>
+  </tr><tr class="method">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.iface.StorageBackend.html#listkeys">listkeys</a></td>
+    <td><span>Logic to list all the keys</span></td>
+  </tr><tr class="method">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.iface.StorageBackend.html#haskey">haskey</a></td>
+    <td><span>Return True if key is in store,</span></td>
+  </tr><tr class="method">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.iface.StorageBackend.html#save">save</a></td>
+    <td><span>Logic to store the value held by</span></td>
+  </tr><tr class="method">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.iface.StorageBackend.html#get">get</a></td>
+    <td><span>Returns the value referenced by</span></td>
+  </tr><tr class="method">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.iface.StorageBackend.html#delete">delete</a></td>
+    <td><span>Delete a value from the store by the</span></td>
+  </tr><tr class="method">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.iface.StorageBackend.html#close">close</a></td>
+    <td><span>If your backend needs to do something to persist</span></td>
+  </tr>
+  
+</table>
+      
+      
+    </div>
+    
+    
+    
+
+    <div class="function">
+  <a name="navistore.backend.iface.StorageBackend.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self):
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="navistore.backend.nhttp.HttpStorageBackend.html">navistore.backend.nhttp.HttpStorageBackend</a>, <a href="navistore.backend.nsqlite.SqliteStorageBackend.html">navistore.backend.nsqlite.SqliteStorageBackend</a></div>
+    <div>Any required initialization shold go here.</p>
+<p>If the backend failed to initialize its environment like files, dirs, 
+services this method should throw an expection with appropriate error.<table class="fieldTable"></table></div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.iface.StorageBackend.listkeys">
+    
+  </a>
+  <a name="listkeys">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    listkeys(self):
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="navistore.backend.nhttp.HttpStorageBackend.html">navistore.backend.nhttp.HttpStorageBackend</a>, <a href="navistore.backend.nsqlite.SqliteStorageBackend.html">navistore.backend.nsqlite.SqliteStorageBackend</a></div>
+    <div>Logic to list all the keys that are currently in the store.</p>
+<p>Should return a Python list populated with the keys.<table class="fieldTable"></table></div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.iface.StorageBackend.haskey">
+    
+  </a>
+  <a name="haskey">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    haskey(self, key):
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="navistore.backend.nhttp.HttpStorageBackend.html">navistore.backend.nhttp.HttpStorageBackend</a>, <a href="navistore.backend.nsqlite.SqliteStorageBackend.html">navistore.backend.nsqlite.SqliteStorageBackend</a></div>
+    <div>Return True if key is in store, False otherwise.<table class="fieldTable"></table></div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.iface.StorageBackend.save">
+    
+  </a>
+  <a name="save">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    save(self, key, value):
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="navistore.backend.nhttp.HttpStorageBackend.html">navistore.backend.nhttp.HttpStorageBackend</a>, <a href="navistore.backend.nsqlite.SqliteStorageBackend.html">navistore.backend.nsqlite.SqliteStorageBackend</a></div>
+    <div>Logic to store the value held by 'value' into the store, to be 
+accessible through the 'key' key.</p>
+<p>Just returnes on success, should raise a storage backend exception 
+otherwise.<table class="fieldTable"></table></div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.iface.StorageBackend.get">
+    
+  </a>
+  <a name="get">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get(self, key):
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="navistore.backend.nhttp.HttpStorageBackend.html">navistore.backend.nhttp.HttpStorageBackend</a>, <a href="navistore.backend.nsqlite.SqliteStorageBackend.html">navistore.backend.nsqlite.SqliteStorageBackend</a></div>
+    <div>Returns the value referenced by the key 'key'<table class="fieldTable"></table></div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.iface.StorageBackend.delete">
+    
+  </a>
+  <a name="delete">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    delete(self, key, getvalue=False):
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="navistore.backend.nhttp.HttpStorageBackend.html">navistore.backend.nhttp.HttpStorageBackend</a>, <a href="navistore.backend.nsqlite.SqliteStorageBackend.html">navistore.backend.nsqlite.SqliteStorageBackend</a></div>
+    <div>Delete a value from the store by the key 'key'.</p>
+<p>If getvalue is True, return the deleted value prior to deleting it.</p>
+<p>Returns True if succeded, False otherwise.<table class="fieldTable"></table></div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.iface.StorageBackend.close">
+    
+  </a>
+  <a name="close">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    close(self):
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="navistore.backend.nsqlite.SqliteStorageBackend.html">navistore.backend.nsqlite.SqliteStorageBackend</a></div>
+    <div>If your backend needs to do something to persist data when its process 
+ends, add it here.</p>
+<p>For example, finishing transactions, writing in memory data to disk 
+etc.</p>
+<p>Should not return anything but rather raise an exception if the action 
+failed.<table class="fieldTable"></table></div>
+  </div>
+</div>
+    <address>
+      <a href="index.html">API Documentation</a> for navistore, generated by <a href="http://codespeak.net/~mwh/pydoctor/">pydoctor</a> at 2010-11-13 15:44:55.
+    </address>
+  </body>
+</html>

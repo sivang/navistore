@@ -1,0 +1,5 @@
+include *.txt
+recursive-include navistore *.txt *.py *.js
+prune debian
+recursive-include docs *
+nhttpserver

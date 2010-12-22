@@ -1,0 +1,203 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>navistore.backend.nhttpserver : API documentation</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <link href="apidocs.css" type="text/css" rel="stylesheet" />
+    
+    
+  </head>
+  <body>
+    <h1 class="module">n.b.nhttpserver : module documentation</h1>
+    <p>
+      <span id="part">Part of <a href="navistore.html">navistore</a>.<a href="navistore.backend.html">backend</a></span>
+      
+      
+    </p>
+    <div>
+      
+    </div>
+    <div>Navistore rest server module.<table class="fieldTable"></table></div>
+
+    
+    
+    <div id="splitTables">
+      <table class="children sortable" id="id7">
+  
+  
+<tr class="class">
+    
+    
+    <td>Class</td>
+    <td><a href="navistore.backend.nhttpserver.NavistoreValuePage.html">NavistoreValuePage</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    
+    <td>Class</td>
+    <td><a href="navistore.backend.nhttpserver.NavistoreRoot.html">NavistoreRoot</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    
+    <td>Function</td>
+    <td><a href="navistore.backend.nhttpserver.html#get_logger">get_logger</a></td>
+    <td><span>Create a logger instance, that will</span></td>
+  </tr><tr class="function">
+    
+    
+    <td>Function</td>
+    <td><a href="navistore.backend.nhttpserver.html#start_server">start_server</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    
+    <td>Function</td>
+    <td><a href="navistore.backend.nhttpserver.html#runtime_opts">runtime_opts</a></td>
+    <td><span>Use optparse to parse command line arguments</span></td>
+  </tr><tr class="function">
+    
+    
+    <td>Function</td>
+    <td><a href="navistore.backend.nhttpserver.html#main">main</a></td>
+    <td><span>Navistore reference HTTP REST server, supporting the</span></td>
+  </tr>
+  
+</table>
+      
+      
+    </div>
+    
+    
+    
+
+    <div class="function">
+  <a name="navistore.backend.nhttpserver.get_logger">
+    
+  </a>
+  <a name="get_logger">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get_logger(filepath):
+    
+  </div>
+  <div class="functionBody">
+    
+    <div>Create a logger instance, that will log to the specified 'filepath'. 
+Uses the Python stdlib logging facility.<table class="fieldTable"></table></div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.nhttpserver.start_server">
+    
+  </a>
+  <a name="start_server">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    start_server(*args):
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.nhttpserver.runtime_opts">
+    
+  </a>
+  <a name="runtime_opts">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    runtime_opts():
+    
+  </div>
+  <div class="functionBody">
+    
+    <div>Use optparse to parse command line arguments passed to the server upon 
+invocation.<table class="fieldTable"></table></div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.nhttpserver.main">
+    
+  </a>
+  <a name="main">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    main():
+    
+  </div>
+  <div class="functionBody">
+    
+    <div>Navistore reference HTTP REST server, supporting the Navistore storage 
+backend API.</p>
+<p>Serves values through keys, using the currently set storage backend.</p>
+<p>To replace the currently used backend find the line with:</p>
+<p><code>from navistore.backend.nsqlite import SqliteStorageBackend as 
+StorageBackend</code></p>
+<p>And replace 'SqliteStorageBackend' and 'nsqlite' with the module and 
+class name where your backend is.</p>
+<p>This reference http rest server supports replication by repeating the 
+data modification operations across the navistore instances listed by the 
+/_replicated_slaves key's value.</p>
+<p>This approach for replication was taken after assuming the 
+following:</p>
+<ul>
+  <li>
+    The classic operation model for Navistore is inside a LAN, where 
+    bandwidth is not an issue.
+  </li>
+  <li>
+    Twisted is performant enough to stand high growth in request and its 
+    deferreds mechanism will be able to properly handle remote data 
+    modification through its asynchronous PUT and DELETE calls.
+  </li>
+  <li>
+    High load on storage backend will not delay replication operations.
+  </li>
+</ul>
+<p>Uses demonize.py for proper service creation. This includes exist status
+propogated through the child process hirarchy.</p>
+<p>To run the server on the foreground, suitable for testing and 
+experimenting with the server in a non system-wide fashion. To do that 
+simply issue <code> $ nhttpserver </code> in a terminal.</p>
+<p>To use it as a daemon, please consult the command line arguments by 
+issuing: <code> $ nhttpserver --help </code></p>
+<p>If in foreground mode, once started log messages are sent to stdout and 
+you can use curl (install it through your system's package manager) to use 
+the server:</p>
+<p>To save a key: <code> $ curl -X PUT http://localhost:8888/name -d 
+&quot;sivan&quot;</code></p>
+<p>Retrieve the value: <code> $ curl -X GET http://localhost:8888/name 
+</code></p>
+<p>To list all keys in the instance: <code> $ curl -X GET 
+http://localhost:8888/listkeys </code></p>
+<p>To delete a key (and the value): <code> $ curl -X DELETE 
+http://localhost:8888/name </code></p>
+<p>To clear the instance and start fresh: <code> $ curl -X GET 
+http://localhost:8888/reset </code></p>
+<p>Enable replication; this will replicate any value from now on to the 
+peers defined in: <code> $ curl -X PUT 
+http://localhost:8888/_replication_slaves -d 
+&quot;http://192.168.1.1:8880,http://192.168.1.2:8880 </code></p>
+<p>To disable replication just delete the key: <code> $ curl -X DELETE 
+http://localhost:8888/_replication_slaves </code><table class="fieldTable"></table></div>
+  </div>
+</div>
+    <address>
+      <a href="index.html">API Documentation</a> for navistore, generated by <a href="http://codespeak.net/~mwh/pydoctor/">pydoctor</a> at 2010-11-13 15:44:55.
+    </address>
+  </body>
+</html>

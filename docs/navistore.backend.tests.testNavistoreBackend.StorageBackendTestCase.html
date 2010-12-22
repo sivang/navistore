@@ -1,0 +1,266 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>navistore.backend.tests.testNavistoreBackend.StorageBackendTestCase : API documentation</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <link href="apidocs.css" type="text/css" rel="stylesheet" />
+    
+    
+  </head>
+  <body>
+    <h1 class="class">n.b.t.t.StorageBackendTestCase(<span title="unittest.TestCase">unittest.TestCase</span>) : class documentation</h1>
+    <p>
+      <span id="part">Part of <a href="navistore.html">navistore</a>.<a href="navistore.backend.html">backend</a>.<a href="navistore.backend.tests.html">tests</a>.<a href="navistore.backend.tests.testNavistoreBackend.html">testNavistoreBackend</a></span>
+      
+      <a href="classIndex.html#navistore.backend.tests.testNavistoreBackend.StorageBackendTestCase">View In Hierarchy</a>
+    </p>
+    <div>
+      <p>Known subclasses: <a href="navistore.backend.tests.testHttpBackend.HttpStorageBackendTestCase.html">navistore.backend.tests.testHttpBackend.HttpStorageBackendTestCase</a>, <a href="navistore.backend.tests.testSqliteBackend.SqliteStorageBackendTestCase.html">navistore.backend.tests.testSqliteBackend.SqliteStorageBackendTestCase</a></p>
+    </div>
+    <div>Canonical storage backend test.</p>
+<p>This test case also serves to secure the API, or rather the minimal API 
+a backend should support to be used as a Navistore backend.<table class="fieldTable"></table></div>
+
+    
+    
+    <div id="splitTables">
+      <table class="children sortable" id="id14">
+  
+  
+<tr class="method">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.tests.testNavistoreBackend.StorageBackendTestCase.html#setUp">setUp</a></td>
+    <td><span>create a backend object that allows us</span></td>
+  </tr><tr class="method">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.tests.testNavistoreBackend.StorageBackendTestCase.html#tearDown">tearDown</a></td>
+    <td><span>Clear test residual</span></td>
+  </tr><tr class="method">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.tests.testNavistoreBackend.StorageBackendTestCase.html#test_save_and_get">test_save_and_get</a></td>
+    <td><span>Test saving a value by a key to the database</span></td>
+  </tr><tr class="method">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.tests.testNavistoreBackend.StorageBackendTestCase.html#test_modify">test_modify</a></td>
+    <td><span>Make sure that values can be modified, e.g.</span></td>
+  </tr><tr class="method">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.tests.testNavistoreBackend.StorageBackendTestCase.html#test_listkeys">test_listkeys</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.tests.testNavistoreBackend.StorageBackendTestCase.html#test_haskey">test_haskey</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.tests.testNavistoreBackend.StorageBackendTestCase.html#test_delete">test_delete</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.tests.testNavistoreBackend.StorageBackendTestCase.html#test_loadstore">test_loadstore</a></td>
+    <td><span>Make sure that we are truly persistent.</span></td>
+  </tr><tr class="method">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.tests.testNavistoreBackend.StorageBackendTestCase.html#test_reset">test_reset</a></td>
+    <td><span>This should wipe all data from the</span></td>
+  </tr>
+  
+</table>
+      
+      
+    </div>
+    
+    
+    
+
+    <div class="function">
+  <a name="navistore.backend.tests.testNavistoreBackend.StorageBackendTestCase.setUp">
+    
+  </a>
+  <a name="setUp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    setUp(self):
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="navistore.backend.tests.testHttpBackend.HttpStorageBackendTestCase.html">navistore.backend.tests.testHttpBackend.HttpStorageBackendTestCase</a>, <a href="navistore.backend.tests.testSqliteBackend.SqliteStorageBackendTestCase.html">navistore.backend.tests.testSqliteBackend.SqliteStorageBackendTestCase</a></div>
+    <pre>create a backend object that allows us
+to interact with the key value storage
+- Specific to the backend being tested.</pre>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.tests.testNavistoreBackend.StorageBackendTestCase.tearDown">
+    
+  </a>
+  <a name="tearDown">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tearDown(self):
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="navistore.backend.tests.testHttpBackend.HttpStorageBackendTestCase.html">navistore.backend.tests.testHttpBackend.HttpStorageBackendTestCase</a>, <a href="navistore.backend.tests.testSqliteBackend.SqliteStorageBackendTestCase.html">navistore.backend.tests.testSqliteBackend.SqliteStorageBackendTestCase</a></div>
+    <div><p>Clear test residual</p>
+<ul>
+  <li>
+    This is specific to the backend tested.
+  </li>
+</ul>
+<table class="fieldTable"></table></div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.tests.testNavistoreBackend.StorageBackendTestCase.test_save_and_get">
+    
+  </a>
+  <a name="test_save_and_get">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_save_and_get(self):
+    
+  </div>
+  <div class="functionBody">
+    
+    <div>Test saving a value by a key to the database and fetching it back.<table class="fieldTable"></table></div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.tests.testNavistoreBackend.StorageBackendTestCase.test_modify">
+    
+  </a>
+  <a name="test_modify">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_modify(self):
+    
+  </div>
+  <div class="functionBody">
+    
+    <div>Make sure that values can be modified, e.g. saving a new value under the
+same key replaces the previous value stored.<table class="fieldTable"></table></div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.tests.testNavistoreBackend.StorageBackendTestCase.test_listkeys">
+    
+  </a>
+  <a name="test_listkeys">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_listkeys(self):
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.tests.testNavistoreBackend.StorageBackendTestCase.test_haskey">
+    
+  </a>
+  <a name="test_haskey">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_haskey(self):
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.tests.testNavistoreBackend.StorageBackendTestCase.test_delete">
+    
+  </a>
+  <a name="test_delete">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_delete(self):
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="navistore.backend.tests.testHttpBackend.HttpStorageBackendTestCase.html">navistore.backend.tests.testHttpBackend.HttpStorageBackendTestCase</a></div>
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.tests.testNavistoreBackend.StorageBackendTestCase.test_loadstore">
+    
+  </a>
+  <a name="test_loadstore">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_loadstore(self):
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="navistore.backend.tests.testHttpBackend.HttpStorageBackendTestCase.html">navistore.backend.tests.testHttpBackend.HttpStorageBackendTestCase</a>, <a href="navistore.backend.tests.testSqliteBackend.SqliteStorageBackendTestCase.html">navistore.backend.tests.testSqliteBackend.SqliteStorageBackendTestCase</a></div>
+    <div>Make sure that we are truly persistent. E.g. when re-instantiated we 
+just give access the whatever values are already stored in the store and 
+not fail due to backend implementatino detail. Like,for example in sqlite 
+when a table already exists.<table class="fieldTable"></table></div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.tests.testNavistoreBackend.StorageBackendTestCase.test_reset">
+    
+  </a>
+  <a name="test_reset">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_reset(self):
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overridden in <a href="navistore.backend.tests.testHttpBackend.HttpStorageBackendTestCase.html">navistore.backend.tests.testHttpBackend.HttpStorageBackendTestCase</a></div>
+    <div>This should wipe all data from the store as if we reset it up.<table class="fieldTable"></table></div>
+  </div>
+</div>
+    <address>
+      <a href="index.html">API Documentation</a> for navistore, generated by <a href="http://codespeak.net/~mwh/pydoctor/">pydoctor</a> at 2010-11-13 15:44:55.
+    </address>
+  </body>
+</html>

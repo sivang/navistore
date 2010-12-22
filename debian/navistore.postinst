@@ -1,0 +1,22 @@
+#!/bin/sh -e
+
+case $1 in
+    configure)
+    	update-python-modules navistore
+	mkdir -p /var/lib/navistore/store
+	chmod -R 0770 /var/lib/navistore
+        if ! getent passwd navistore > /dev/null; then
+            adduser --system --home /var/lib/navistore --no-create-home \
+                --shell /bin/bash \
+		--group --gecos "Navistore Administrator" navistore
+	chown -R navistore:navistore /var/lib/navistore/
+        mkdir -p /var/log/navistore
+	mkdir -p /var/run/navistore/
+        chown -R navistore:navistore /var/log/navistore/
+	chown -R navistore:navistore /var/run/navistore/
+        chmod 0770 /var/log/navistore
+        fi
+        ;;
+esac
+
+#DEBHELPER#

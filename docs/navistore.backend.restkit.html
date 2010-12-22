@@ -1,0 +1,167 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>navistore.backend.restkit : API documentation</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <link href="apidocs.css" type="text/css" rel="stylesheet" />
+    
+    
+  </head>
+  <body>
+    <h1 class="package">n.b.restkit : package documentation</h1>
+    <p>
+      <span id="part">Part of <a href="navistore.html">navistore</a>.<a href="navistore.backend.html">backend</a></span>
+      
+      
+    </p>
+    <div>
+      
+    </div>
+    <div class="undocumented">No package docstring</div>
+
+    
+    
+    <div id="splitTables">
+      <table class="children sortable" id="id23">
+  
+  
+<tr class="module">
+    
+    
+    <td>Module</td>
+    <td><a href="navistore.backend.restkit.client.html">client</a></td>
+    <td><span class="undocumented">No module docstring; 2/2 classes documented</span></td>
+  </tr><tr class="package">
+    
+    
+    <td>Package</td>
+    <td><a href="navistore.backend.restkit.contrib.html">contrib</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="module">
+    
+    
+    <td>Module</td>
+    <td><a href="navistore.backend.restkit.errors.html">errors</a></td>
+    <td><span>exception classes.</span></td>
+  </tr><tr class="package">
+    
+    
+    <td>Package</td>
+    <td><a href="navistore.backend.restkit.filters.html">filters</a></td>
+    <td><span>filters - Http filters</span></td>
+  </tr><tr class="module">
+    
+    
+    <td>Module</td>
+    <td><a href="navistore.backend.restkit.forms.html">forms</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="package">
+    
+    
+    <td>Package</td>
+    <td><a href="navistore.backend.restkit.http.html">http</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="package">
+    
+    
+    <td>Package</td>
+    <td><a href="navistore.backend.restkit.pool.html">pool</a></td>
+    <td><span class="undocumented">No package docstring; 1/5 modules documented</span></td>
+  </tr><tr class="module">
+    
+    
+    <td>Module</td>
+    <td><a href="navistore.backend.restkit.resource.html">resource</a></td>
+    <td><span>restkit.resource</span></td>
+  </tr><tr class="module">
+    
+    
+    <td>Module</td>
+    <td><a href="navistore.backend.restkit.tee.html">tee</a></td>
+    <td><span>TeeInput replace old FileInput. It use a file</span></td>
+  </tr><tr class="package">
+    
+    
+    <td>Package</td>
+    <td><a href="navistore.backend.restkit.util.html">util</a></td>
+    <td><span class="undocumented">No package docstring; 1/4 modules documented</span></td>
+  </tr>
+  
+</table>
+      
+      
+    </div>
+    
+    
+    <p>From the __init__.py module:</p><table class="children sortable" id="id24">
+  
+  
+<tr class="function">
+    
+    
+    <td>Function</td>
+    <td><a href="navistore.backend.restkit.html#request">request</a></td>
+    <td><span>Quick shortcut method to pass a request</span></td>
+  </tr><tr class="function">
+    
+    
+    <td>Function</td>
+    <td><a href="navistore.backend.restkit.html#set_logging">set_logging</a></td>
+    <td><span>Set level of logging, and choose where to display/save logs</span></td>
+  </tr>
+  
+</table>
+
+    <div class="function">
+  <a name="navistore.backend.restkit.set_logging">
+    
+  </a>
+  <a name="set_logging">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_logging(level, handler=None):
+    
+  </div>
+  <div class="functionBody">
+    
+    <div>Set level of logging, and choose where to display/save logs (file or 
+standard output).<table class="fieldTable"></table></div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.restkit.request">
+    
+  </a>
+  <a name="request">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    request(url, method='GET', body=None, headers=None, timeout=_GLOBAL_DEFAULT_TIMEOUT, filters=None, follow_redirect=False, force_follow_redirect=False, max_follow_redirect=MAX_FOLLOW_REDIRECTS, pool_instance=None, response_class=None, **ssl_args):
+    
+  </div>
+  <div class="functionBody">
+    
+    <div>Quick shortcut method to pass a request</p>
+<p>:param url: str, url string :param method: str, by default GET. http 
+verbs :param body: the body, could be a string, an iterator or a file-like 
+object :param headers: dict or list of tupple, http headers :pool intance: 
+instance inherited from `restkit.pool.PoolInterface`. It allows you to 
+share and reuse connections connections. :param follow_redirect: boolean, 
+by default is false. If true, if the HTTP status is 301, 302 or 303 the 
+client will follow the location. :param filters: list, list of http 
+filters. see the doc of http filters for more info :param ssl_args: ssl 
+arguments. See http://docs.python.org/library/ssl.html for more 
+information.<table class="fieldTable"></table></div>
+  </div>
+</div>
+    <address>
+      <a href="index.html">API Documentation</a> for navistore, generated by <a href="http://codespeak.net/~mwh/pydoctor/">pydoctor</a> at 2010-11-13 15:44:55.
+    </address>
+  </body>
+</html>

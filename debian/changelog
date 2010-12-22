@@ -1,0 +1,5 @@
+navistore (0.0.1-1) unstable; urgency=low
+
+  * Initial release, according to spotify's assignment spec.
+
+ -- Sivan Greenberg <sivan@omniqueue.com>  Thu, 21 Nov 2010 02:20:25 +0200

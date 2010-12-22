@@ -1,0 +1,230 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>navistore.backend.nhttp.HttpStorageBackend : API documentation</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <link href="apidocs.css" type="text/css" rel="stylesheet" />
+    
+    
+  </head>
+  <body>
+    <h1 class="class">n.b.n.HttpStorageBackend(<a href="navistore.backend.iface.StorageBackend.html">iface.StorageBackend</a>) : class documentation</h1>
+    <p>
+      <span id="part">Part of <a href="navistore.html">navistore</a>.<a href="navistore.backend.html">backend</a>.<a href="navistore.backend.nhttp.html">nhttp</a></span>
+      
+      <a href="classIndex.html#navistore.backend.nhttp.HttpStorageBackend">View In Hierarchy</a>
+    </p>
+    <div>
+      
+    </div>
+    <div class="undocumented">Undocumented</div>
+
+    
+    
+    <div id="splitTables">
+      <table class="children sortable" id="id151">
+  
+  
+<tr class="method">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.nhttp.HttpStorageBackend.html#__init__">__init__</a></td>
+    <td><span>Any required initialization shold go</span></td>
+  </tr><tr class="method">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.nhttp.HttpStorageBackend.html#listkeys">listkeys</a></td>
+    <td><span>Logic to list all the keys</span></td>
+  </tr><tr class="method">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.nhttp.HttpStorageBackend.html#haskey">haskey</a></td>
+    <td><span>Return True if key is in store,</span></td>
+  </tr><tr class="method">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.nhttp.HttpStorageBackend.html#save">save</a></td>
+    <td><span>Logic to store the value held by</span></td>
+  </tr><tr class="method">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.nhttp.HttpStorageBackend.html#get">get</a></td>
+    <td><span>Returns the value referenced by</span></td>
+  </tr><tr class="method">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.nhttp.HttpStorageBackend.html#delete">delete</a></td>
+    <td><span>Delete a value from the store by the</span></td>
+  </tr><tr class="method">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.nhttp.HttpStorageBackend.html#reset">reset</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+  
+</table>
+      
+        <p>
+          Inherited from <a href="navistore.backend.iface.StorageBackend.html">StorageBackend</a>:
+        </p>
+        <table class="children sortable" id="id152">
+  
+  
+<tr class="basemethod">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.iface.StorageBackend.html#close">close</a></td>
+    <td><span>If your backend needs to do something to persist</span></td>
+  </tr>
+  
+</table>
+      
+      
+    </div>
+    
+    
+    
+
+    <div class="function">
+  <a name="navistore.backend.nhttp.HttpStorageBackend.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, uri):
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <a href="navistore.backend.iface.StorageBackend.html#__init__">navistore.backend.iface.StorageBackend.__init__</a></div>
+    <div>Any required initialization shold go here.</p>
+<p>If the backend failed to initialize its environment like files, dirs, 
+services this method should throw an expection with appropriate error.<table class="fieldTable"></table></div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.nhttp.HttpStorageBackend.listkeys">
+    
+  </a>
+  <a name="listkeys">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    listkeys(self):
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <a href="navistore.backend.iface.StorageBackend.html#listkeys">navistore.backend.iface.StorageBackend.listkeys</a></div>
+    <div>Logic to list all the keys that are currently in the store.</p>
+<p>Should return a Python list populated with the keys.<table class="fieldTable"></table></div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.nhttp.HttpStorageBackend.haskey">
+    
+  </a>
+  <a name="haskey">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    haskey(self, key):
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <a href="navistore.backend.iface.StorageBackend.html#haskey">navistore.backend.iface.StorageBackend.haskey</a></div>
+    <div>Return True if key is in store, False otherwise.<table class="fieldTable"></table></div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.nhttp.HttpStorageBackend.save">
+    
+  </a>
+  <a name="save">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    save(self, key, value):
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <a href="navistore.backend.iface.StorageBackend.html#save">navistore.backend.iface.StorageBackend.save</a></div>
+    <div>Logic to store the value held by 'value' into the store, to be 
+accessible through the 'key' key.</p>
+<p>Just returnes on success, should raise a storage backend exception 
+otherwise.<table class="fieldTable"></table></div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.nhttp.HttpStorageBackend.get">
+    
+  </a>
+  <a name="get">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    get(self, key):
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <a href="navistore.backend.iface.StorageBackend.html#get">navistore.backend.iface.StorageBackend.get</a></div>
+    <div>Returns the value referenced by the key 'key'<table class="fieldTable"></table></div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.nhttp.HttpStorageBackend.delete">
+    
+  </a>
+  <a name="delete">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    delete(self, key):
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <a href="navistore.backend.iface.StorageBackend.html#delete">navistore.backend.iface.StorageBackend.delete</a></div>
+    <div>Delete a value from the store by the key 'key'.</p>
+<p>If getvalue is True, return the deleted value prior to deleting it.</p>
+<p>Returns True if succeded, False otherwise.<table class="fieldTable"></table></div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.nhttp.HttpStorageBackend.reset">
+    
+  </a>
+  <a name="reset">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    reset(self):
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+    <address>
+      <a href="index.html">API Documentation</a> for navistore, generated by <a href="http://codespeak.net/~mwh/pydoctor/">pydoctor</a> at 2010-11-13 15:44:55.
+    </address>
+  </body>
+</html>

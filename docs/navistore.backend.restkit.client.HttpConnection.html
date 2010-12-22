@@ -1,0 +1,309 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>navistore.backend.restkit.client.HttpConnection : API documentation</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <link href="apidocs.css" type="text/css" rel="stylesheet" />
+    
+    
+  </head>
+  <body>
+    <h1 class="class">n.b.r.c.HttpConnection(<span title="object">object</span>) : class documentation</h1>
+    <p>
+      <span id="part">Part of <a href="navistore.html">navistore</a>.<a href="navistore.backend.html">backend</a>.<a href="navistore.backend.restkit.html">restkit</a>.<a href="navistore.backend.restkit.client.html">client</a></span>
+      
+      <a href="classIndex.html#navistore.backend.restkit.client.HttpConnection">View In Hierarchy</a>
+    </p>
+    <div>
+      
+    </div>
+    <div>Http Connection object.<table class="fieldTable"></table></div>
+
+    
+    
+    <div id="splitTables">
+      <table class="children sortable" id="id146">
+  
+  
+<tr class="method">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.restkit.client.HttpConnection.html#__init__">__init__</a></td>
+    <td><span>HttpConnection constructor</span></td>
+  </tr><tr class="method">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.restkit.client.HttpConnection.html#make_connection">make_connection</a></td>
+    <td><span>initate a connection if needed or reuse a socket</span></td>
+  </tr><tr class="method">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.restkit.client.HttpConnection.html#clean_connections">clean_connections</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.restkit.client.HttpConnection.html#release_connection">release_connection</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.restkit.client.HttpConnection.html#parse_url">parse_url</a></td>
+    <td><span>parse url and get host/port</span></td>
+  </tr><tr class="method">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.restkit.client.HttpConnection.html#set_body">set_body</a></td>
+    <td><span>set HTTP body and manage form if needed</span></td>
+  </tr><tr class="method">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.restkit.client.HttpConnection.html#request">request</a></td>
+    <td><span>make effective request</span></td>
+  </tr><tr class="method">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.restkit.client.HttpConnection.html#do_send">do_send</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="method">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.restkit.client.HttpConnection.html#do_redirect">do_redirect</a></td>
+    <td><span>follow redirections if needed</span></td>
+  </tr><tr class="method">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.restkit.client.HttpConnection.html#start_response">start_response</a></td>
+    <td><span>Get headers, set Body object and return HttpResponse</span></td>
+  </tr><tr class="method private">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.restkit.client.HttpConnection.html#_req_headers">_req_headers</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr>
+  
+</table>
+      
+      
+    </div>
+    
+    
+    
+
+    <div class="function">
+  <a name="navistore.backend.restkit.client.HttpConnection.__init__">
+    
+  </a>
+  <a name="__init__">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    __init__(self, timeout=sock._GLOBAL_DEFAULT_TIMEOUT, filters=None, follow_redirect=False, force_follow_redirect=False, max_follow_redirect=MAX_FOLLOW_REDIRECTS, pool_instance=None, response_class=None, **ssl_args):
+    
+  </div>
+  <div class="functionBody">
+    
+    <div>HttpConnection constructor</p>
+<p>:param timeout: socket timeout :param filters: list, list of http 
+filters. see the doc of http filters for more info :param follow_redirect: 
+boolean, by default is false. If true, if the HTTP status is 301, 302 or 
+303 the client will follow the location. :param max_follow_redirect: max 
+number of redirection. If max is reached the RedirectLimit exception is 
+raised. :param pool_instance: a pool instance inherited from 
+`restkit.pool.PoolInterface` :param ssl_args: ssl arguments. See 
+http://docs.python.org/library/ssl.html for more information.<table class="fieldTable"></table></div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.restkit.client.HttpConnection.make_connection">
+    
+  </a>
+  <a name="make_connection">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    make_connection(self):
+    
+  </div>
+  <div class="functionBody">
+    
+    <div>initate a connection if needed or reuse a socket<table class="fieldTable"></table></div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.restkit.client.HttpConnection.clean_connections">
+    
+  </a>
+  <a name="clean_connections">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    clean_connections(self):
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.restkit.client.HttpConnection.release_connection">
+    
+  </a>
+  <a name="release_connection">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    release_connection(self, address, socket):
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.restkit.client.HttpConnection.parse_url">
+    
+  </a>
+  <a name="parse_url">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    parse_url(self, url):
+    
+  </div>
+  <div class="functionBody">
+    
+    <div>parse url and get host/port<table class="fieldTable"></table></div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.restkit.client.HttpConnection.set_body">
+    
+  </a>
+  <a name="set_body">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    set_body(self, body, content_type=None, content_length=None, chunked=False):
+    
+  </div>
+  <div class="functionBody">
+    
+    <div>set HTTP body and manage form if needed<table class="fieldTable"></table></div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.restkit.client.HttpConnection.request">
+    
+  </a>
+  <a name="request">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    request(self, url, method='GET', body=None, headers=None):
+    
+  </div>
+  <div class="functionBody">
+    
+    <div>make effective request</p>
+<p>:param url: str, url string :param method: str, by default GET. http 
+verbs :param body: the body, could be a string, an iterator or a file-like 
+object :param headers: dict or list of tupple, http headers<table class="fieldTable"></table></div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.restkit.client.HttpConnection._req_headers">
+    
+  </a>
+  <a name="_req_headers">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    _req_headers(self):
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.restkit.client.HttpConnection.do_send">
+    
+  </a>
+  <a name="do_send">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    do_send(self):
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.restkit.client.HttpConnection.do_redirect">
+    
+  </a>
+  <a name="do_redirect">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    do_redirect(self, response, location):
+    
+  </div>
+  <div class="functionBody">
+    
+    <div>follow redirections if needed<table class="fieldTable"></table></div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.restkit.client.HttpConnection.start_response">
+    
+  </a>
+  <a name="start_response">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    start_response(self):
+    
+  </div>
+  <div class="functionBody">
+    
+    <div>Get headers, set Body object and return HttpResponse<table class="fieldTable"></table></div>
+  </div>
+</div>
+    <address>
+      <a href="index.html">API Documentation</a> for navistore, generated by <a href="http://codespeak.net/~mwh/pydoctor/">pydoctor</a> at 2010-11-13 15:44:55.
+    </address>
+  </body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>navistore.backend.restkit.util.oauth2 : API documentation</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <link href="apidocs.css" type="text/css" rel="stylesheet" />
+    
+    
+  </head>
+  <body>
+    <h1 class="module">n.b.r.u.oauth2 : module documentation</h1>
+    <p>
+      <span id="part">Part of <a href="navistore.html">navistore</a>.<a href="navistore.backend.html">backend</a>.<a href="navistore.backend.restkit.html">restkit</a>.<a href="navistore.backend.restkit.util.html">util</a></span>
+      
+      
+    </p>
+    <div>
+      
+    </div>
+    <div class="undocumented">No module docstring</div>
+
+    
+    
+    <div id="splitTables">
+      <table class="children sortable" id="id109">
+  
+  
+<tr class="class">
+    
+    
+    <td>Class</td>
+    <td><a href="navistore.backend.restkit.util.oauth2.Error.html">Error</a></td>
+    <td><span>Generic exception class.</span></td>
+  </tr><tr class="class">
+    
+    
+    <td>Class</td>
+    <td><a href="navistore.backend.restkit.util.oauth2.MissingSignature.html">MissingSignature</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="function">
+    
+    
+    <td>Function</td>
+    <td><a href="navistore.backend.restkit.util.oauth2.html#build_authenticate_header">build_authenticate_header</a></td>
+    <td><span>Optional WWW-Authenticate header (401 error)</span></td>
+  </tr><tr class="function">
+    
+    
+    <td>Function</td>
+    <td><a href="navistore.backend.restkit.util.oauth2.html#build_xoauth_string">build_xoauth_string</a></td>
+    <td><span>Build an XOAUTH string for use in SMTP/IMPA authentication.</span></td>
+  </tr><tr class="function">
+    
+    
+    <td>Function</td>
+    <td><a href="navistore.backend.restkit.util.oauth2.html#escape">escape</a></td>
+    <td><span>Escape a URL including any /.</span></td>
+  </tr><tr class="function">
+    
+    
+    <td>Function</td>
+    <td><a href="navistore.backend.restkit.util.oauth2.html#generate_timestamp">generate_timestamp</a></td>
+    <td><span>Get seconds since epoch (UTC).</span></td>
+  </tr><tr class="function">
+    
+    
+    <td>Function</td>
+    <td><a href="navistore.backend.restkit.util.oauth2.html#generate_nonce">generate_nonce</a></td>
+    <td><span>Generate pseudorandom number.</span></td>
+  </tr><tr class="function">
+    
+    
+    <td>Function</td>
+    <td><a href="navistore.backend.restkit.util.oauth2.html#generate_verifier">generate_verifier</a></td>
+    <td><span>Generate pseudorandom number.</span></td>
+  </tr><tr class="class">
+    
+    
+    <td>Class</td>
+    <td><a href="navistore.backend.restkit.util.oauth2.Consumer.html">Consumer</a></td>
+    <td><span>A consumer of OAuth-protected services.</span></td>
+  </tr><tr class="class">
+    
+    
+    <td>Class</td>
+    <td><a href="navistore.backend.restkit.util.oauth2.Token.html">Token</a></td>
+    <td><span>An OAuth credential used to request authorization or a protected</span></td>
+  </tr><tr class="function">
+    
+    
+    <td>Function</td>
+    <td><a href="navistore.backend.restkit.util.oauth2.html#setter">setter</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="class">
+    
+    
+    <td>Class</td>
+    <td><a href="navistore.backend.restkit.util.oauth2.Request.html">Request</a></td>
+    <td><span>The parameters and information for an HTTP request, suitable for</span></td>
+  </tr><tr class="class">
+    
+    
+    <td>Class</td>
+    <td><a href="navistore.backend.restkit.util.oauth2.Server.html">Server</a></td>
+    <td><span>A skeletal implementation of a service provider, providing protected</span></td>
+  </tr><tr class="class">
+    
+    
+    <td>Class</td>
+    <td><a href="navistore.backend.restkit.util.oauth2.SignatureMethod.html">SignatureMethod</a></td>
+    <td><span>A way of signing requests.</span></td>
+  </tr><tr class="class">
+    
+    
+    <td>Class</td>
+    <td><a href="navistore.backend.restkit.util.oauth2.SignatureMethod_HMAC_SHA1.html">SignatureMethod_HMAC_SHA1</a></td>
+    <td><span class="undocumented">No class docstring; 1/2 methods documented</span></td>
+  </tr><tr class="class">
+    
+    
+    <td>Class</td>
+    <td><a href="navistore.backend.restkit.util.oauth2.SignatureMethod_PLAINTEXT.html">SignatureMethod_PLAINTEXT</a></td>
+    <td><span class="undocumented">No class docstring; 1/2 methods documented</span></td>
+  </tr>
+  
+</table>
+      
+      
+    </div>
+    
+    
+    
+
+    <div class="function">
+  <a name="navistore.backend.restkit.util.oauth2.build_authenticate_header">
+    
+  </a>
+  <a name="build_authenticate_header">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    build_authenticate_header(realm=''):
+    
+  </div>
+  <div class="functionBody">
+    
+    <div>Optional WWW-Authenticate header (401 error)<table class="fieldTable"></table></div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.restkit.util.oauth2.build_xoauth_string">
+    
+  </a>
+  <a name="build_xoauth_string">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    build_xoauth_string(url, consumer, token=None):
+    
+  </div>
+  <div class="functionBody">
+    
+    <div>Build an XOAUTH string for use in SMTP/IMPA authentication.<table class="fieldTable"></table></div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.restkit.util.oauth2.escape">
+    
+  </a>
+  <a name="escape">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    escape(s):
+    
+  </div>
+  <div class="functionBody">
+    
+    <div>Escape a URL including any /.<table class="fieldTable"></table></div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.restkit.util.oauth2.generate_timestamp">
+    
+  </a>
+  <a name="generate_timestamp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    generate_timestamp():
+    
+  </div>
+  <div class="functionBody">
+    
+    <div>Get seconds since epoch (UTC).<table class="fieldTable"></table></div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.restkit.util.oauth2.generate_nonce">
+    
+  </a>
+  <a name="generate_nonce">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    generate_nonce(length=8):
+    
+  </div>
+  <div class="functionBody">
+    
+    <div>Generate pseudorandom number.<table class="fieldTable"></table></div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.restkit.util.oauth2.generate_verifier">
+    
+  </a>
+  <a name="generate_verifier">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    generate_verifier(length=8):
+    
+  </div>
+  <div class="functionBody">
+    
+    <div>Generate pseudorandom number.<table class="fieldTable"></table></div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.restkit.util.oauth2.setter">
+    
+  </a>
+  <a name="setter">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    setter(attr):
+    
+  </div>
+  <div class="functionBody">
+    
+    <div class="undocumented">Undocumented</div>
+  </div>
+</div>
+    <address>
+      <a href="index.html">API Documentation</a> for navistore, generated by <a href="http://codespeak.net/~mwh/pydoctor/">pydoctor</a> at 2010-11-13 15:44:55.
+    </address>
+  </body>
+</html>

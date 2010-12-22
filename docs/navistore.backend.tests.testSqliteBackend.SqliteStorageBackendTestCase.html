@@ -1,0 +1,177 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "DTD/xhtml1-strict.dtd">
+<html>
+  <head>
+    <title>navistore.backend.tests.testSqliteBackend.SqliteStorageBackendTestCase : API documentation</title>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <link href="apidocs.css" type="text/css" rel="stylesheet" />
+    
+    
+  </head>
+  <body>
+    <h1 class="class">n.b.t.t.SqliteStorageBackendTestCase(<a href="navistore.backend.tests.testNavistoreBackend.StorageBackendTestCase.html">testNavistoreBackend.StorageBackendTestCase</a>) : class documentation</h1>
+    <p>
+      <span id="part">Part of <a href="navistore.html">navistore</a>.<a href="navistore.backend.html">backend</a>.<a href="navistore.backend.tests.html">tests</a>.<a href="navistore.backend.tests.testSqliteBackend.html">testSqliteBackend</a></span>
+      
+      <a href="classIndex.html#navistore.backend.tests.testSqliteBackend.SqliteStorageBackendTestCase">View In Hierarchy</a>
+    </p>
+    <div>
+      
+    </div>
+    <div>Just provide the neccessary setup and teardown required to have the 
+store ready for compliance test by the generic backend test.</p>
+<p>We override the test_loadstore since we need to explicitly sync a 
+connection before destorying or recreating it, in order to persist still in
+memory data to disk.</p>
+<p>And this is exactly what we do in setUp, reassigning a new backend 
+object to the self.store reference which wipes out the previous object with
+all its state data.<table class="fieldTable"></table></div>
+
+    
+    
+    <div id="splitTables">
+      <table class="children sortable" id="id21">
+  
+  
+<tr class="method">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.tests.testSqliteBackend.SqliteStorageBackendTestCase.html#setUp">setUp</a></td>
+    <td><span>create a backend object that allows us</span></td>
+  </tr><tr class="method">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.tests.testSqliteBackend.SqliteStorageBackendTestCase.html#tearDown">tearDown</a></td>
+    <td><span>Clear test residual</span></td>
+  </tr><tr class="method">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.tests.testSqliteBackend.SqliteStorageBackendTestCase.html#test_loadstore">test_loadstore</a></td>
+    <td><span>Make sure that we are truly persistent.</span></td>
+  </tr>
+  
+</table>
+      
+        <p>
+          Inherited from <a href="navistore.backend.tests.testNavistoreBackend.StorageBackendTestCase.html">StorageBackendTestCase</a>:
+        </p>
+        <table class="children sortable" id="id22">
+  
+  
+<tr class="basemethod">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.tests.testNavistoreBackend.StorageBackendTestCase.html#test_save_and_get">test_save_and_get</a></td>
+    <td><span>Test saving a value by a key to the database</span></td>
+  </tr><tr class="basemethod">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.tests.testNavistoreBackend.StorageBackendTestCase.html#test_modify">test_modify</a></td>
+    <td><span>Make sure that values can be modified, e.g.</span></td>
+  </tr><tr class="basemethod">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.tests.testNavistoreBackend.StorageBackendTestCase.html#test_listkeys">test_listkeys</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.tests.testNavistoreBackend.StorageBackendTestCase.html#test_haskey">test_haskey</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.tests.testNavistoreBackend.StorageBackendTestCase.html#test_delete">test_delete</a></td>
+    <td><span class="undocumented">Undocumented</span></td>
+  </tr><tr class="basemethod">
+    
+    
+    <td>Method</td>
+    <td><a href="navistore.backend.tests.testNavistoreBackend.StorageBackendTestCase.html#test_reset">test_reset</a></td>
+    <td><span>This should wipe all data from the</span></td>
+  </tr>
+  
+</table>
+      
+      
+    </div>
+    
+    
+    
+
+    <div class="function">
+  <a name="navistore.backend.tests.testSqliteBackend.SqliteStorageBackendTestCase.setUp">
+    
+  </a>
+  <a name="setUp">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    setUp(self):
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <a href="navistore.backend.tests.testNavistoreBackend.StorageBackendTestCase.html#setUp">navistore.backend.tests.testNavistoreBackend.StorageBackendTestCase.setUp</a></div>
+    <div>create a backend object that allows us to interact with the key value 
+storage<table class="fieldTable"></table></div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.tests.testSqliteBackend.SqliteStorageBackendTestCase.tearDown">
+    
+  </a>
+  <a name="tearDown">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    tearDown(self):
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <a href="navistore.backend.tests.testNavistoreBackend.StorageBackendTestCase.html#tearDown">navistore.backend.tests.testNavistoreBackend.StorageBackendTestCase.tearDown</a></div>
+    <div><p>Clear test residual</p>
+<ul>
+  <li>
+    This is specific to the backend tested.
+  </li>
+</ul>
+<table class="fieldTable"></table></div>
+  </div>
+</div><div class="function">
+  <a name="navistore.backend.tests.testSqliteBackend.SqliteStorageBackendTestCase.test_loadstore">
+    
+  </a>
+  <a name="test_loadstore">
+    
+  </a>
+  <div class="functionHeader">
+    
+    def
+    test_loadstore(self):
+    
+  </div>
+  <div class="functionBody">
+    <div class="interfaceinfo">overrides <a href="navistore.backend.tests.testNavistoreBackend.StorageBackendTestCase.html#test_loadstore">navistore.backend.tests.testNavistoreBackend.StorageBackendTestCase.test_loadstore</a></div>
+    <div>Make sure that we are truly persistent. E.g. when re-instantiated we 
+just give access the whatever values are already stored in the store and 
+not fail due to backend implementatino detail. Like,for example in sqlite 
+when a table already exists.<table class="fieldTable"></table></div>
+  </div>
+</div>
+    <address>
+      <a href="index.html">API Documentation</a> for navistore, generated by <a href="http://codespeak.net/~mwh/pydoctor/">pydoctor</a> at 2010-11-13 15:44:55.
+    </address>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+#!/bin/sh -e
+
+# Copyright 2009, Noah Slater <nslater@tumbolia.org>
+
+# Copying and distribution of this file, with or without modification, are
+# permitted in any medium without royalty provided the copyright notice and this
+# notice are preserved.
+
+case $1 in
+    purge)
+        if test -d "/var/lib/navistore"; then
+            rmdir --ignore-fail-on-non-empty "/var/lib/navistore" || true
+        fi
+        if test -d "/var/log/navistore"; then
+            rm -r -f "/var/log/navistore"
+        fi
+        if test -d "/var/run/navistore"; then
+            rmdir --ignore-fail-on-non-empty "/var/run/navistore" || true
+        fi
+        ;;
+esac
+
+#DEBHELPER#

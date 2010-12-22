@@ -1,0 +1,24 @@
+Source: navistore
+Maintainer: Sivan Greenberg <sivan@omniqueue.com>
+Section: python
+Priority: optional
+Build-Depends: python-setuptools (>= 0.6b3), debhelper (>= 7), python-support (>= 0.8.4), fakeroot
+Standards-Version: 3.8.0
+
+Package: navistore
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}, adduser, python-twisted-web, python-pysqlite2, python-simplejson
+Provides: ${python:Provides}
+Description: Navistore Python Key Value Store
+ Navistore is an example implementation of a key value store
+ using the twisted.web framework. It is a very loosly coupled
+ API and a reference web server implementation revolving mainly
+ around a defined contract which you can choose to implement
+ in order to replace either the web server implementation, the
+ storage backend (currently there exist only DBI 2.0 sqlite
+ reference implementation) and the very minimal REST api that is
+ currently supported. To use the reference REST api server, start
+ by issuing 'nhttpserver --help' to see available arguments. To just
+ have it running at foreground using cwd for storage, simple execute
+ 'nhttpserver' at the command prompt.
+
