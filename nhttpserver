@@ -1,7 +1,10 @@
 #!/usr/bin/env python
 """
+Copyright (C) 2011 Sivan Greenberg <sivan@omniqueue.com>
+Released under GPL v2/v3
+
 Navistore reference HTTP REST server, supporting the
-Navistore storage backend API. 
+Navistore storage backend API. This is part of Navistore.
 
 Serves values through keys, using the currently set storage
 backend.
