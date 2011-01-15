@@ -1,4 +1,9 @@
 """
+
+Navistore Copyright (C) 2011 Sivan Greenberg <sivan@omniqueue.com>
+
+Navistore is released under the GPL v2/v3
+
 Navistore: 
 
 	- A reference key value store engine written in Python, using twisted.web.
