@@ -19,7 +19,7 @@ need to be caught when working with module:
 - http://benoitc.github.com/restkit/api/toc-restkit.errors-module.html
 
 restkit and couchdbkit are released under MIT. 
-They are Copyright (C) and developed and maintained by Benoît Chesneau.
+They are Copyright (C) and developed and maintained by Benoit Chesneau.
 
 You are encouraged to read about restkit:
 - http://benoitc.github.com/restkit/index.html
