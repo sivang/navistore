@@ -10,11 +10,18 @@ and some utility methods for resetting the store.
 This requires the restkit module. All methods are subject
 to the standard HTTP error raised through restkit exceptions.
 
+restkit and couchdbkit are released under MIT. 
+They are developed and maintained by the
+wonderful Benoît Chesneau, read 
+
 Consult the restkit documentation for the possible errors that
 need to be caught when working with module:
 - http://benoitc.github.com/restkit/api/toc-restkit.errors-module.html
 
-To read about restkit:
+restkit and couchdbkit are released under MIT. 
+They are Copyright (C) and developed and maintained by Benoît Chesneau.
+
+You are encouraged to read about restkit:
 - http://benoitc.github.com/restkit/index.html
 """
 
