@@ -90,7 +90,7 @@ import time
 import os
 import logging
 
-class NavistoreValuePage(Resource):
+class NavistoreValuePage(Resource)
 	isLeaf = True
 	def __init__(self, name, backend, logger):
 		Resource.__init__(self)
