@@ -50,8 +50,9 @@ the reference backend as a base point, it shouldn't be hard to add
 more backends. sqlite3 was chosen as it is concurrent and performant 
 given transactions are kept short and small, which Navistore follows 
 as well. Sqlite is also a good reference point since using the 
-DBI 2.0 specification one can upgrade to an enterprise grade database 
-server with a change of a mere connection string!
+DBI 2.0 specification one *can upgrade to an enterprise grade database 
+server with a change of a mere connection string!*
+
 The Navistore package contains:
 	- nhttpserver: A twisted.web based server script that implements the rest api
 	  and does the actual serving of values by keys through HTTP. To learn about
