@@ -30,6 +30,7 @@ greatly enabled good design and easier process in development iterations,
 but took more time at start of development for design of APIs 
 and interface as a result of tests design.
 Design followed the following delimitations:
+
 	- Navistore is used inside a LAN, so no need to deal with authentication.
 	- The LAN usecase allowed for a rather naive replication implementation,
   	  that might not hold in deployment across WANs due to latency.
@@ -42,6 +43,7 @@ Design followed the following delimitations:
 	  already addressed by available market solutions.
 	- twisted is performant enough and robust to handle load given a backend
 	  does not block or is latent in handling reads/writes.
+	  
 There is currently only one backend provided, that uses sqlite3 for
 the actual data storage. However, given the defined interface and
 the reference backend as a base point, it shouldn't be hard to add
