@@ -2,7 +2,7 @@ naviStore
 =========
 
 Pure Python implementation of a key value store using the twisted.web framework
-Navistore Copyright (C) 2011 Sivan Greenberg <sivan@omniqueue.com>
+Navistore Copyright (C) 2011-2018 Sivan Greenberg <sivan@omniqueue.com>
 
 
 Following Python Zen (https://www.python.org/dev/peps/pep-0020/):
